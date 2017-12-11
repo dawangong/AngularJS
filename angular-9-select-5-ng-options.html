@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <select name="" id="" ng-model="item" ng-options="x for (x,y) in people"></select>
+        <p>example:{{item.name+'|'+item.age}}</p>
+    </div>
+    <script>
+        let apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+            $scope.people={
+                boy:{name:'bob',age:'23'},
+                girl:{name:'amy',age:'14'}
+            }
+        });
+        //数据为复杂对象（x）
+    </script>
+</body>
+</html>

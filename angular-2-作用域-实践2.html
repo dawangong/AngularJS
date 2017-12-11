@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="oapp" ng-controller="ctrl">
+    <p>还有多少字可以输入{{rest()}}</p>
+    <textarea name="" id="" cols="30" rows="10"  ng-model="len"></textarea>
+    <input type="submit" ng-disabled="rest()<=0">
+    <input type="reset" ng-click="reset()">
+</div>
+
+
+<script>
+    let oapp=angular.module('oapp',[]);
+    oapp.controller('ctrl',($scope) => {
+        $scope.len=100;
+        $scope.len='';
+        $scope.rest=() => 100-$scope.len.length;
+        $scope.reset=() => $scope.len='';
+    })
+</script>
+</body>
+</html>

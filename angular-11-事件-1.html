@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <button ng-click="count=count+1">go:{{count}}</button>
+</div>
+<script>
+    let apps=angular.module('apps',[]);
+    apps.controller('ctrl',($scope) => {
+        $scope.count=0;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/angular-2-作用域-实践1.css">
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" >
+    <div ng-controller="ctrl">
+        <input type="text" name="" id="" ng-model="x">
+        <p>{{x+1}}</p>
+    </div>
+
+    <div ng-controller="ctrl2">
+        <p>{{y}}</p>
+
+    </div>
+</div>
+
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope,$rootScope) => {
+        $scope.x = 3;
+        $rootScope.y = 9;
+    })
+    apps.controller('ctrl2',($scope) => {
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <p>{{zhi}}</p>
+</div>
+<script>
+    let apps=angular.module('apps',[]);
+    apps.service('zhuan',function(){
+        return function(text){
+            return text.toString(2);
+        }
+    });
+    apps.controller('ctrl',($scope,zhuan) => {
+        $scope.zhi=zhuan(3);
+    });
+</script>
+</body>
+</html>

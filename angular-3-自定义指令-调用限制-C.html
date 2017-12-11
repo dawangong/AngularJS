@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps">
+    <div class="jk"></div>
+</div>
+<script>
+    let apps=angular.module('apps',[]);
+    apps.directive('jk',function () {
+        return{
+            restrict:'C',
+            template:'<h1>ddd</h1>'
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+let apps=angular.module('apps',[]);

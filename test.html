@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <p>{{value}}</p>
+        <input type="text" name="" id="" ng-model="value">
+    </div>
+    <script>
+        let apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+            $scope.value='5';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <p>{{wenzi}}</p>
+</div>
+<script>
+    let apps=angular.module('apps',[]);
+    apps.controller('ctrl',($scope,$timeout) => {
+        $scope.wenzi='延时更改';
+        $timeout(() => {
+            $scope.wenzi='success';
+        },2000)
+    })
+</script>
+</body>
+</html>

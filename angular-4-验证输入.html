@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<form action="" method="get" name="for" ng-app="apps">
+    <span>请输入你的邮箱</span>
+    <input type="email" name="mai" id="" ng-model="text">
+    <!--这里ng-model去掉无效-->
+    <span ng-show="for.mai.$error.email">输入格式错误</span>
+</form>
+<script>
+    let apps=angular.module('apps',[]);
+</script>
+</body>
+</html>

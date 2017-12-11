@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <select ng-model="name" ng-options="x for x in names"></select>
+    </div>
+    <script>
+        let apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+            $scope.names=['北京','上海','深圳','杭州'];
+            $scope.name=$scope.names[0];
+        })
+    </script>
+</body>
+</html>

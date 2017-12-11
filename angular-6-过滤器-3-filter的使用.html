@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <input type="text" name="" id="" ng-model="text">
+        <ul>
+            <li ng-repeat="i in jp|filter:text|orderBy:'name'">
+                {{i.name+'|'+i.sex}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        let apps = angular.module('apps', []);
+        apps.controller('ctrl', ($scope) => {
+            $scope.jp = [{name: 'zhangsan', sex: 'boy'},{name:'lisi',sex:'boy'},{name:'xiaomei',sex:'girl'}];
+        })
+    </script>
+</body>
+</html>

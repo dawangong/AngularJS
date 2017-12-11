@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <ul>
+        <li ng-repeat="i in arr">
+            {{i.age|guo}}
+        </li>
+    </ul>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.service('to', function () {
+        return function (txt) {
+            return txt.toString(2);
+        }
+    });
+    apps.filter('guo', ['to',function(to){
+        return function (x) {
+            return to(x);
+        };
+    }]);
+    apps.controller('ctrl', ($scope) => {
+        $scope.arr = [{age: 4}, {age: 6}];
+    });
+</script>
+</body>
+</html>

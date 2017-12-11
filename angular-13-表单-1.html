@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <input type="checkbox" name="" id="" ng-model="kz">
+        <h1 ng-show="kz">选中复选框我就出现了</h1>
+    </div>
+    <script>
+        let apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+
+        });
+    </script>
+</body>
+</html>

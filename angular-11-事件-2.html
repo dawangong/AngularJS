@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <button ng-click="toggle()">控制显隐</button>
+        <p ng-hide="me">显示？&隐藏？</p>
+    </div>
+    <script>
+        let  apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+            $scope.me=false;
+            $scope.toggle=() => {
+                $scope.me=!$scope.me;
+            }
+        });
+    </script>
+</body>
+</html>

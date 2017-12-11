@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <select name="" id="" ng-model="kz"  ng-options="x for x in arr"></select>
+        <div ng-switch="kz">
+            <div ng-switch-when="dog">dog</div>
+            <div ng-switch-when="cat">cat</div>
+            <div ng-switch-when="panda">panda</div>
+        </div>
+    </div>
+    <script>
+        let apps=angular.module('apps',[]);
+        apps.controller('ctrl',($scope) => {
+            $scope.arr=[
+                'dog',
+                'cat',
+                'panda'
+            ];
+        });
+    </script>
+</body>
+</html>
