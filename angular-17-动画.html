@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            transition: all linear 0.8s;
+            width: 400px;
+            height:200px;
+            background: rebeccapurple;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .ng-hide{
+            height: 0;
+            width: 0;
+            background-color: transparent;
+            top:-200px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <button ng-click="toggle()">点我</button>
+        <div class="box"  ng-hide="kz"></div>
+    </div>
+
+    <script>
+        let apps=angular.module('apps',['ngAnimate']);
+        apps.controller('ctrl',function ($scope) {
+            $scope.kz=false;
+            $scope.toggle=function () {
+                $scope.kz=!$scope.kz;
+            }
+        })
+    </script>
+</body>
+</html>

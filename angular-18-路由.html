@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+</head>
+<body>
+    <div ng-app="apps" ng-controller="ctrl">
+        <ul>
+            <li><a href="#/0">1</a></li>
+            <li><a href="#/a">2</a></li>
+            <li><a href="#/b">3</a></li>
+            <li><a href="#/c">4</a></li>
+        </ul>
+        <div ng-view style="width: 300px;height: 300px;">
+
+        </div>
+    </div>
+    <script>
+        let apps=angular.module('apps',['ngRoute']);
+        apps.controller('ctrl',function () {
+
+        });
+        apps.config(['$routeProvider',function ($routeProvider) {
+            $routeProvider.when('/0',{template:'0.html'}).when('/a',{template:'a.html'}).when('/b',{template:'b.html'}).when('/c',{template:'c.html'});
+        }])
+    </script>
+</body>
+</html>
