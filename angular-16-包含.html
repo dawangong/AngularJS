@@ -6,12 +6,15 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <div ng-include="a.html"></div>
-    </div>
-    <script>
-        let apps=angular.module('apps',[])
-        //问题
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <div ng-include="'a.html'"></div>
+    <!--注意里面还有一对单引号-->
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl',function () {
+        
+    });
+</script>
 </body>
 </html>

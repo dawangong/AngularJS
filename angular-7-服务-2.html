@@ -10,12 +10,12 @@
     <p>{{wenzi}}</p>
 </div>
 <script>
-    let apps=angular.module('apps',[]);
-    apps.controller('ctrl',($scope,$timeout) => {
-        $scope.wenzi='延时更改';
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope, $timeout) => {
+        $scope.wenzi = '延时更改';
         $timeout(() => {
-            $scope.wenzi='success';
-        },2000)
+            $scope.wenzi = 'success';
+        }, 2000)
     })
 </script>
 </body>

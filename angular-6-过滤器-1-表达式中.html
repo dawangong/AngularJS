@@ -6,18 +6,18 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <input type="text" name="" id="" ng-model="zhuan">
-        <p>转换：{{zhuan|currency}}</p>
-        <input type="text" name="" id="" ng-model="up">
-        <p>up:{{up|uppercase}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.zhuan=0;
-            $scope.up='a';
-        });
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <input type="text" name="" ng-model="zhuan">
+    <p>转换：{{zhuan|currency}}</p>
+    <input type="text" name="" ng-model="up">
+    <p>up:{{up|uppercase}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope) => {
+        $scope.zhuan = 0;
+        $scope.up = 'a';
+    });
+</script>
 </body>
 </html>

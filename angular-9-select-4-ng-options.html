@@ -6,22 +6,22 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <select name="" id="" ng-model="item" ng-options="x for  (x,y) in jp">
+<div ng-app="apps" ng-controller="ctrl">
+    <select name="" id="" ng-model="item" ng-options="x for  (x,y) in jp">
 
-        </select>
-        <p>example:{{item}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.jp={
-                name:'zhangsan',
-                sex:'boy',
-                age:'30'
-            }
-        });
-        //数据为简单对象
-    </script>
+    </select>
+    <p>example:{{item}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope) => {
+        $scope.jp = {
+            name: 'zhangsan',
+            sex: 'boy',
+            age: '30'
+        }
+    });
+    //数据为简单对象
+</script>
 </body>
 </html>

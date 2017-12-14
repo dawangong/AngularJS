@@ -7,12 +7,12 @@
 </head>
 <body>
 <div ng-app="apps">
-    <!-- directive:my-de -->
+     <!--directive:my-de -->
 
 </div>
 <script>
     let apps=angular.module('apps',[]);
-    apps.directive('myDe',function () {
+    apps.directive('myDe',() => {
         return{
             restrict:'M',
             replace:true,

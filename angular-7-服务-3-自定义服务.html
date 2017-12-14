@@ -10,14 +10,14 @@
     <p>{{zhi}}</p>
 </div>
 <script>
-    let apps=angular.module('apps',[]);
-    apps.service('zhuan',function(){
-        return function(text){
+    let apps = angular.module('apps', []);
+    apps.service('zhuan', function () {
+        return (text) => {
             return text.toString(2);
         }
     });
-    apps.controller('ctrl',($scope,zhuan) => {
-        $scope.zhi=zhuan(3);
+    apps.controller('ctrl', ($scope, zhuan) => {
+        $scope.zhi = zhuan(3);
     });
 </script>
 </body>

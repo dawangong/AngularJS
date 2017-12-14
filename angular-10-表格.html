@@ -6,29 +6,29 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <table>
-            <tr>
-                <td >序号</td>
-                <td>名字（——>大写）</td>
-                <td>城市</td>
-                <td>国家</td>
-            </tr>
-            <tr ng-repeat="x in arr|orderBy:'Country'" style="{{$even?'background:blue':'';}}">
-                <td >{{$index+1}}</td>
-                <td>{{x.Name|uppercase}}</td>
-                <td>{{x.City}}</td>
-                <td>{{x.Country}}</td>
-            </tr>
-        </table>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope,$http) => {
-            $http.get('../www/angular-10-表格.txt').then((res) => {
-                $scope.arr=res.data;//res.data 代表宏观数据
-            });
+<div ng-app="apps" ng-controller="ctrl">
+    <table>
+        <tr>
+            <td>序号</td>
+            <td>名字（——>大写）</td>
+            <td>城市</td>
+            <td>国家</td>
+        </tr>
+        <tr ng-repeat="x in arr|orderBy:'Country'" style="{{$even?'background:blue':'';}}">
+            <td>{{$index+1}}</td>
+            <td>{{x.Name|uppercase}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+    </table>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope, $http) => {
+        $http.get('b.txt').then((res) => {
+            $scope.arr = res.data;//res.data 代表宏观数据
         });
-    </script>
+    });
+</script>
 </body>
 </html>

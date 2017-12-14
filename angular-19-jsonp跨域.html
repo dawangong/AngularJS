@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <div class="box">
+        <img src="{{ssrc}}" alt="">
+    </div>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', function ($scope, $http) {
+        $http.jsonp('http://list.mogujie.com/search?callback=JSON_CALLBACK&_version=1&ad=2&f=mgjlm&acm=3.mf.1_0_0.0.0.0.mf_15261_485406-idx_0-mfs_' +
+            '26&_mgjuuid=00cdad41-8cdc-4744-a5c4-9ebcf3cd798a&sort=pop&ptp=1._mf1_1239_' +
+            '15261.0.0.ORb9UD&userId=&showH=330&cKey=15&fcid=51249&width=220&action=shoes&page=1&showW=220&he' +
+            'ight=330&ratio=2%3A3&cpc_offset=0&offset=&_=1498388815054').then(function (res) {
+            $scope.ssrc = res.data.result.wall.docs[0].img;
+        });
+    })
+
+</script>
+</body>
+</html>

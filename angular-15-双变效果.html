@@ -20,18 +20,18 @@
 
 <script>
     var app = angular.module('myApp', []);
-    app.controller('personCtrl', function($scope) {
+    app.controller('personCtrl', function ($scope) {
         $scope.person = {
             firstName: "John",
             lastName: "Doe"
         };
         $scope.myVar = true;
-        $scope.kz='显示';
-        $scope.zhi1='显示';
-        $scope.zhi2='隐藏';
-        $scope.toggle = function() {
+        $scope.kz = '隐藏';
+        $scope.zhi1 = '隐藏';
+        $scope.zhi2 = '显示';
+        $scope.toggle = function () {
             $scope.myVar = !$scope.myVar;
-            $scope.kz=$scope.myVar?$scope.zhi1:$scope.zhi2;
+            $scope.kz = $scope.myVar ? $scope.zhi1 : $scope.zhi2;
         };
     });
 </script>

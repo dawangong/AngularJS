@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="MyCtrl">
+    <loader>点击加载</loader>
+</div>
+<script>
+    var myModule = angular.module("MyModule", []);
+
+    myModule.controller('MyCtrl', ['$scope', function ($scope) {
+        $scope.loadData = function () {
+            console.log("正在加载数据....");
+        }
+    }]);
+
+    myModule.directive("loader", function () {
+        return {
+            restrict: 'AE',
+            link: function (scope, element, attrs) {
+                element.bind("click", function () {
+                    scope.loadData();
+                })
+            }
+        };
+    });
+    //attrs是个map，内容是你这个directive上的所有属性
+</script>
+</body>
+
+</html>

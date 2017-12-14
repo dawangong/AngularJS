@@ -6,19 +6,19 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <select name="" id="" ng-model="item" ng-options="y.name for (x,y) in jp"></select>
-        <p>example:{{item.age}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.jp={
-                boy:{name:'bob',age:'23'},
-                girl:{name:'amy',age:'14'}
-            }
-        });
-        //数据源为复杂对象（y.n）
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <select name="" id="" ng-model="item" ng-options="y.name for (x,y) in jp"></select>
+    <p>example:{{item.age}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope) => {
+        $scope.jp = {
+            boy: {name: 'bob', age: '23'},
+            girl: {name: 'amy', age: '14'}
+        }
+    });
+    //数据源为复杂对象（y.n）
+</script>
 </body>
 </html>

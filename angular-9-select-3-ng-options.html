@@ -6,22 +6,22 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <select name="" id="" ng-model="item"  ng-options="x.city for x in names">
-
-        </select>
-        <p>{{item.size}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.names=[
-                {city:'北京',size:'3'},
-                {city:'上海',size:'2'},
-                {city:'深圳',size:'1'}
-            ];
-        })
-        //数据为数组
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <select name="" id="" ng-model="item" ng-options="x.city for x in names">
+        <option value="">空</option>
+    </select>
+    <p>{{item.size}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope) => {
+        $scope.names = [
+            {city: '北京', size: '3'},
+            {city: '上海', size: '2'},
+            {city: '深圳', size: '1'}
+        ];
+    })
+    //数据为数组
+</script>
 </body>
 </html>

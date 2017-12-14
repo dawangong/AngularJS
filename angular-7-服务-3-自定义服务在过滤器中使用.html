@@ -20,7 +20,7 @@
             return txt.toString(2);
         }
     });
-    apps.filter('guo', ['to',function(to){
+    apps.filter('guo', ['to', function (to) {
         return function (x) {
             return to(x);
         };
@@ -28,6 +28,7 @@
     apps.controller('ctrl', ($scope) => {
         $scope.arr = [{age: 4}, {age: 6}];
     });
+    //自定义服务就是angular中的工具函数，filter可以将这个工具函数拿来用（通过某种方法）
 </script>
 </body>
 </html>

@@ -6,21 +6,20 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <input type="text" name="" id="" ng-model="lue">
-        <p>反转：{{lue|reverse}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.lue='';
-
-        });
-        apps.filter('reverse',() =>{
-            return (text) =>{
-                return text.split('').reverse().join('');
-            }
-        })
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <input type="text" name="" id="" ng-model="lue">
+    <p>反转：{{lue|reverse}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope) => {
+        $scope.lue = 'ni';
+    });
+    apps.filter('reverse', () => {
+        return (text) => {
+            return text.split('').reverse().join('');
+        }
+    })
+</script>
 </body>
 </html>

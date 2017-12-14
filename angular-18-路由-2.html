@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+</head>
+<body>
+<div ng-app="apps" ng-controller="ctrl">
+    <ul>
+        <li><a href="#/">go1</a></li>
+        <li><a href="#/b">go2</a></li>
+        <li><a href="#/c">go3</a></li>
+        <li><a href="#/main">返回首页</a></li>
+    </ul>
+    <div ng-view></div>
+</div>
+<script>
+    let apps = angular.module('apps', ['ngRoute']);
+    apps.controller('ctrl', function () {
+
+    }).controller('ctrl1', function () {
+
+    }).controller('ctrl2', function () {
+
+    }).controller('ctrl3', function () {
+
+    }).config(function ($routeProvider) {
+        $routeProvider.when('/', {templateUrl: 'a.html'}).when('/b', {templateUrl: 'b.html'})
+            .when('/c', {templateUrl: 'c.html'}).when('/main', {templateUrl: 'a.html'});
+
+    });
+</script>
+</body>
+</html>

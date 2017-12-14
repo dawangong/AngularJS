@@ -5,25 +5,25 @@
     <title>ng-switch</title>
     <script src="js/angular.min.js"></script>
 </head>
-<body ng-app="apps" >
-<input type="radio" name="" id="" ng-model="kz" value="dog">dog
-<input type="radio" name="" id="" ng-model="kz" value="cat">cat
-<input type="radio" name="" id="" ng-model="kz" value="panda">panda
-    <!--单选性控件是并列关系，一次只能有一个被选中，选中时model才会绑定值-->
-    <!--switch貌似只能和单选性控件搭配-->
-    <div ng-switch="kz">
-        <div ng-switch-when="dog">
-            <p>dog</p>
-        </div>
-        <div ng-switch-when="cat">
-            <p>cat</p>
-        </div>
-        <div ng-switch-when="panda">
-            <p>panda</p>
-        </div>
+<body ng-app="apps">
+<input type="radio" name="" ng-model="kz" value="dog">dog
+<input type="radio" name="" ng-model="kz" value="cat">cat
+<input type="radio" name="" ng-model="kz" value="panda">panda
+<!--单选性控件是并列关系，一次只能有一个被选中，选中时model才会绑定值-->
+<!--switch貌似只能和单选性控件搭配-->
+<div ng-switch="kz">
+    <div ng-switch-when="dog">
+        <p>dog</p>
     </div>
+    <div ng-switch-when="cat">
+        <p>cat</p>
+    </div>
+    <div ng-switch-when="panda">
+        <p>panda</p>
+    </div>
+</div>
 <script>
-    let apps=angular.module('apps',[]);
+    let apps = angular.module('apps', []);
 </script>
 </body>
 </html>

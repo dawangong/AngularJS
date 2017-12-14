@@ -6,14 +6,14 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <p>{{oul}}</p>
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope,$location) => {
-            $scope.oul=$location.absUrl();
-        })
-    </script>
+<div ng-app="apps" ng-controller="ctrl">
+    <p>{{oul}}</p>
+</div>
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope, $location) => {
+        $scope.oul = $location.absUrl();
+    })
+</script>
 </body>
 </html>

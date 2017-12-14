@@ -1,20 +1,39 @@
+<!-- ScopeAt.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="MyModule">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="js/angular.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
 </head>
 <body>
-    <div ng-app="apps" ng-controller="ctrl">
-        <p>{{value}}</p>
-        <input type="text" name="" id="" ng-model="value">
-    </div>
-    <script>
-        let apps=angular.module('apps',[]);
-        apps.controller('ctrl',($scope) => {
-            $scope.value='5';
-        })
-    </script>
+<div ng-controller="MyCtrl">
+    <drink flavor="{{ctrlFlavor}}"></drink>
+</div>
 </body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript">
+    var myModule = angular.module("MyModule",[]);
+    myModule.controller('MyCtrl', ['$scope', function($scope){
+        $scope.ctrlFlavor = "百威";
+    }])
+    // myModule.directive("drink", function(){
+    //     return {
+    //         restrict: 'AE',
+    //         template:"<div>{{flavor}}</div>",
+    //         link: function(scope, element, attrs){
+    //             scope.flavor = attrs.flavor;
+    //         }
+    //     }
+    // })
+    //以上可以直接写作：
+    myModule.directive("drink", function(){
+        return {
+            restrict:'AE',
+            scope: {
+                flavor: '@'
+            },
+            template: "<div>{{flavor}}</div>"
+        }
+    })
+</script>
 </html>

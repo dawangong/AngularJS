@@ -1,0 +1,44 @@
+<!-- Directive&Controller.html -->
+<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="MyCtrl1">
+    <loader howToLoad="loadData1()">滑动加载</loader>
+</div>
+<div ng-controller="MyCtrl2">
+    <loader howToLoad="loadData2()">滑动加载</loader>
+</div>
+<script>
+    var myModule = angular.module("MyModule", []);
+
+    myModule.controller('MyCtrl1', ['$scope', function ($scope) {
+        $scope.loadData1 = function () {
+            console.log("加载数据中....111");
+        }
+    }]);
+
+    myModule.controller('MyCtrl2', ['$scope', function ($scope) {
+        $scope.loadData2 = function () {
+            console.log("加载数据中....222");
+        }
+    }]);
+
+    myModule.directive("loader", function () {
+        return {
+            restrict: 'AE',
+            link: function (scope, element, attr) {
+                element.bind("mouseenter", function () {
+                    scope.$apply(attr.howtoload);       //注意在定义属性中用的的howToLoad的驼峰命名法，在js里只要用小写就可
+                })
+            }
+        };
+    });
+</script>
+</body>
+</html>
+<!--多个控制器共用一个自定义指令执行不同函数的写法-->

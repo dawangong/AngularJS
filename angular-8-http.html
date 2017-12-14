@@ -6,20 +6,20 @@
     <script src="js/angular.min.js"></script>
 </head>
 <body>
-<div ng-app="apps"  ng-controller="ctrl">
+<div ng-app="apps" ng-controller="ctrl">
     <ul>
         <li ng-repeat="x in names">
             {{x.Name}}
         </li>
     </ul>
 </div>
-    <script>
-    let apps=angular.module('apps',[]);
-    apps.controller('ctrl',($scope,$http) => {
-            $http.get('../www/angular-8-http.txt').then((res) => {
-                $scope.names=res.data.sites;
-            });
+<script>
+    let apps = angular.module('apps', []);
+    apps.controller('ctrl', ($scope, $http) => {
+        $http.get('a.txt').then((res) => {
+            $scope.names = res.data;
+        });
     })
-    </script>
+</script>
 </body>
 </html>
