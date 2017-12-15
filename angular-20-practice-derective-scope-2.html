@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html ng-app="apps">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+
+<div ng-controller="ctrl">
+    <input type="text" ng-model="name">
+    <new></new>
+</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript">
+    //指令和控制器的交互（scope：true）
+    let apps=angular.module('apps',[]);
+    apps.controller('ctrl',function ($scope) {
+        $scope.name='zhangfei';
+        $scope.skill=function () {
+            console.log('the last man standing')
+        }
+    });
+    apps.directive('new',function () {
+        return {
+            template:'<input type="text" ng-model="name">',
+            scope:true,
+        }
+    })
+    //后者不会影响前者
+</script>
+</html>

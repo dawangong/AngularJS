@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="apps">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="ctrl">
+    <div>{{sex}}</div>
+    <hello att="sex"></hello>
+</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script>
+    //用属性通过'@'传输字符串(单向绑定)
+    let apps = angular.module("apps",[]);
+    apps.controller('ctrl',function ($scope) {
+        $scope.sex='mio';
+    });
+    apps.directive("hello", function(){
+        return {
+            scope: {
+                att:'@'
+            },
+            template: '<div><input type="text" ng-model="att"/>{{att}}</div>',
+        }
+    });
+</script>
+</html>

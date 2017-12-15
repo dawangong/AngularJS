@@ -24,6 +24,7 @@
             link: function (scope, element, attrs) {
                 element.bind("click", function () {
                     scope.loadData();
+                    //或者用scope.$apply('loadData()');
                 })
             }
         };

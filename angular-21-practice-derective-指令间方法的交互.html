@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="apps">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <atm ability1>1</atm>
+    <atm ability1 ability2>2</atm>
+    <atm ability1 ability2 ability3>3</atm>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script>
+    //指令和指令的交互（自定义元素和自定义属性）
+    let apps = angular.module("apps",[]);
+    apps.directive("atm", function(){
+        return {
+            scope: {},
+            controller:function () {
+                //内部controller，可以暴露给其他指令用
+               $scope.abilities=[];
+               this.addability1=function () {
+                    $scope.abilities.push('速度&力量');
+                };
+               //自己内部用挂到$scope下，如果要在其他指令调用，要用this。
+               this.addability2=function () {
+                    $scope.abilities.push('飞行&永生');
+                };
+               this.addability3=function () {
+                    $scope.abilities.push('能量&光束');
+                };
+            },
+            link:function (scope,element,attrs) {
+                element.bind('click',function () {
+                    console.log(scope.abilities);
+                })
+            }
+        }
+    });
+    apps.directive('ability1',function () {
+        return {
+//            require意思是ability1指令是依赖atm指令的。
+            require:'^atm',
+            link:function (scope,element,attrs,atmCtrl) {
+                atmCtrl.addability1();
+            }
+        }
+    });
+    apps.directive('ability2',function () {
+        return {
+            require:'^atm',
+            link:function (scope,element,attrs,atmCtrl) {
+                atmCtrl.addability2();
+            }
+        }
+    });
+    apps.directive('ability3',function () {
+        return {
+            require:'^atm',
+            link:function (scope,element,attrs,atmCtrl) {
+                atmCtrl.addability3();
+            }
+        }
+    });
+</script>
+</html>

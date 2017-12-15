@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="apps">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+
+<div ng-controller="ctrl">
+    <translate></translate>
+</div>
+<div ng-controller="ctrl2">
+    <translate2></translate2>
+</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript">
+    //缓存模板读取
+    let apps=angular.module('apps',[]);
+    apps.run(function ($templateCache) {
+        $templateCache.put('temp.html','<h1>123</h1>');
+    });
+    //directive这里记着传参数
+    apps.directive('translate',function ($templateCache) {
+        return{
+            template:$templateCache.get('temp.html')
+        }
+    });
+    apps.directive('translate2',function ($templateCache) {
+        return{
+            template:$templateCache.get('temp.html')
+        }
+    });
+</script>
+</html>

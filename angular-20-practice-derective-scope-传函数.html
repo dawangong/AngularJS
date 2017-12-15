@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="apps">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="ctrl">
+    <hello att="go(zhi)"></hello>
+</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script>
+    //用属性通过'&'传递函数
+    let apps = angular.module("apps",[]);
+    apps.controller('ctrl',function ($scope) {
+        $scope.go=function (zhi) {
+            alert(zhi);
+        }
+    });
+    apps.directive("hello", function(){
+        return {
+            scope: {
+                att:'&'
+            },
+            template: '<input type="text" ng-model="vl"><div ng-click="att({zhi:vl})">click</div>',
+        }
+    });
+</script>
+</html>

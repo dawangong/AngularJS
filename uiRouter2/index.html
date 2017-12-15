@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="../js/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/0.2.16/angular-ui-router.js"></script>
+</head>
+<body ng-app="apps">
+<ul>
+    <li ui-sref="page1">1</li>
+    <li ui-sref="page2">2</li>
+    <li ui-sref="page3">3</li>
+    <li ui-sref="page4">4</li>
+</ul>
+<div ui-view=""></div>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

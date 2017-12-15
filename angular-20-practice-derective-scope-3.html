@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<hello></hello>
+<hello></hello>
+<hello></hello>
+<hello></hello>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script>
+    var myModule = angular.module("MyModule",[]);
+    myModule.directive("hello", function(){
+        return {
+            restrict: 'AE',
+            scope: {},      //如果不加这个配置项，一个改变其他都会改变
+                            //其实设置为scope:true也不会互相影响
+            template: '<div><input type="text" ng-model="userName"/>{{userName}}</div>',
+            replace: true
+        }
+    });
+</script>
+</html>
