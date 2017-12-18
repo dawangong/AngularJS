@@ -10,7 +10,7 @@ controlAp.controller('ctrl', function ($scope,$state) {
         name: 'wangwu',
         sex: 'girl'
     }];
-    $state.go('pageTab.page1');//用来指定默认的视图
+
 });
 
 controlAp.controller('ctrl1', function ($scope) {
