@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784af254-c63b-41e6-8cf1-ac68b53cbe3d" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-link-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-传值-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-传值-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-20-practice-derective-scope-传函数.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular-21-practice-derective-指令间方法的交互.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/js/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/js/services.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/page1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/page2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/page3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/page4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter/pageTab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/js/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/js/services.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/page1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/page2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/page3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/page4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter2/pageTab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/js/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/js/services.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/page1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/page2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/page3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/page4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uiRouter3/pageTab.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AngularJS.iml" afterPath="$PROJECT_DIR$/.idea/AngularJS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-20-practice-derective-link-1.html" afterPath="$PROJECT_DIR$/angular-20-practice-derective-link-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-20-practice-derective-link-2.html" afterPath="$PROJECT_DIR$/angular-20-practice-derective-link-2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/css/main.css" afterPath="$PROJECT_DIR$/router/css/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/index.html" afterPath="$PROJECT_DIR$/router/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/js/app.js" afterPath="$PROJECT_DIR$/router/js/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/js/controllers.js" afterPath="$PROJECT_DIR$/router/js/controllers.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/js/directives.js" afterPath="$PROJECT_DIR$/router/js/directives.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/js/services.js" afterPath="$PROJECT_DIR$/router/js/services.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/page1.html" afterPath="$PROJECT_DIR$/router/page1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/page2.html" afterPath="$PROJECT_DIR$/router/page2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/page3.html" afterPath="$PROJECT_DIR$/router/page3.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module-test/page4.html" afterPath="$PROJECT_DIR$/router/page4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uiRouter3/index.html" afterPath="$PROJECT_DIR$/uiRouter3/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/uiRouter3/index.html">
+      <file leaf-file-name="angular-21-practice-derective-指令间方法的交互.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular-21-practice-derective-指令间方法的交互.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="233">
+              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -173,7 +117,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1253" />
@@ -200,11 +144,6 @@
             <path>
               <item name="AngularJS" type="b2602c69:ProjectViewProjectNode" />
               <item name="AngularJS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AngularJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AngularJS" type="462c0819:PsiDirectoryNode" />
-              <item name="uiRouter3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -267,16 +206,15 @@
       <workItem from="1513150637577" duration="5228000" />
       <workItem from="1513213556008" duration="11760000" />
       <workItem from="1513301169648" duration="10254000" />
-      <workItem from="1513314037673" duration="12984000" />
+      <workItem from="1513314037673" duration="13289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49794000" />
+    <option name="totallyTimeSpent" value="50099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16979167" sideWeight="0.48992577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -442,13 +380,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test-f.html" />
-    <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-scope-传函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-scope-传值-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="845">
@@ -496,14 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-link-3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-scope-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
@@ -516,14 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-21-practice-derective-指令间方法的交互.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -715,7 +630,31 @@
     <entry file="file://$PROJECT_DIR$/uiRouter3/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-scope-传函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-20-practice-derective-link-3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-21-practice-derective-指令间方法的交互.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
