@@ -1,6 +1,6 @@
 let apps = angular.module('apps', ['ui.router', 'controlAp', 'serviceAp', 'directiveAp']);
 apps.config(function ($stateProvider,$urlRouterProvider) {
-    $urlRouterProvider.otherwise( "page1");
+    $urlRouterProvider.otherwise( "other");
     $stateProvider.state('page1', {
         url:'/page1',
         views:{
@@ -8,7 +8,7 @@ apps.config(function ($stateProvider,$urlRouterProvider) {
                 templateUrl: 'page1.html'
             },
             'v2@':{
-                    templateUrl: 'page1-1.html'
+                templateUrl: 'page1-1.html'
                 }
         },
         controller: 'ctrl'
@@ -17,25 +17,33 @@ apps.config(function ($stateProvider,$urlRouterProvider) {
         views:{
             'v1':{
                 templateUrl: 'page2.html'
-            }
-        },
-        controller: 'ctrl1'
+            },
+            'v2@':{
+                templateUrl: 'page1-1.html'
+                }
+        }
+        
     }).state('page3', {
         url:'/page3',
         views:{
             'v1':{
                 templateUrl: 'page3.html'
-            }
-        },
-        controller: 'ctrl2'
+            },
+            'v2@':{
+                templateUrl: 'page1-1.html'
+                }
+        }
+        
     }).state('page4', {
         url:'/page4',
         views:{
             'v1':{
                 templateUrl: 'page4.html'
-            }
+            },
+            'v2@':{
+                templateUrl: 'page1-1.html'
+                }
         },
-        controller: 'ctrl3'
     })
         .state('page1.page1-1', {
         url:'/page1-1',
@@ -65,6 +73,13 @@ apps.config(function ($stateProvider,$urlRouterProvider) {
                 templateUrl: 'page1-4.html'
             }
         }
-    })
+    }).state('other', {
+        url:'/other',
+        views:{
+            'v2@':{
+                    templateUrl: 'page1-1.html'
+                }
+        }
+    });
 });
 
