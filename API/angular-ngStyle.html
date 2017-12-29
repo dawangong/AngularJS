@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <div ng-style="style1">111</div>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.stlye1={
+            "color":"red",
+            "font-size":"16",
+            "background":"orange",
+            "width":"100px",
+            "height":"100px"
+        };
+    }
+    
+   
+    </script>
+</body>

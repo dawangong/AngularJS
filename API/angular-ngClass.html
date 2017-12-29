@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+    <style>
+    .example1 {
+        color: red;
+    }
+
+    .example2 {
+        color: blue;
+    }
+
+    .example3 {
+        color: green;
+    }
+    </style>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <p>1</p>
+    <p ng-class="cls">2</p>
+    <p>3</p>
+    <p ng-class="{true:'example2',false:'example3'}[blooe]">4</p>
+    <p>5</p>
+    <p>6</p>
+    <p ng-class="{'example3':a,'example4':b,'example5':c}">7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.cls = 'example1';
+        $scope.blooe = true;
+        $scope.a = true;
+        $scope.b = false;
+        $scope.c = false;
+    }
+
+    //有三种方法：
+
+    //1、通过$scope绑定
+
+    // 2、通过对象数组绑定
+
+    // 3、通过key/value键值对绑定
+    // ng-value 指令用于设置 input 或 select 元素的 value 属性。
+    </script>
+</body>

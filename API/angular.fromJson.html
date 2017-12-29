@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+    var a = [{ "name": "zhangsan", "sex": "boy" }, { "name": "lisi", "sex": "boy" }, { "name": "wangwu", "sex": "boy" }];
+    var b = angular.fromJson(a);
+    console.log(b);
+    </script>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+    var obj = {
+        name: 'lily',
+        sex: 'girl',
+        skill: function() {
+            alert('skill');
+        }
+    };
+
+    var fn = angular.bind(obj, function() {
+        console.log(this.name);
+    });
+    fn(); //lily
+    //只是给函数绑定了一个执行上下文，也就是取得了访问obj对象的权利（改变this），并没有把函数绑定为obj的方法
+    //看一下es5中bind的作用
+    function add(a, b) {
+        console.log(this.a);
+        return a + b;
+    }
+
+    var c = {
+        a: 'd'
+    };
+    var d = add.bind(c);
+    d();
+    //写法大同小异，作用是一样的
+    </script>
+</body>

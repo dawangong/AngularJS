@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+    var obj = {
+        name: 'lily',
+        sex: 'girl',
+        skill: function() {
+            alert('skill');
+        },
+        hi:'hello'
+    };
+    var temp = angular.toJson(obj);
+    console.log(temp);
+    //此方法会自动过滤掉（跳过）对象下的方法
+    </script>
+</body>

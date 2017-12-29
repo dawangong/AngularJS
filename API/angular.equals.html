@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+
+    var temp = angular.equals(2, '2');
+    console.log(temp);
+    //      两个值或者对象能通过=== （恒等） 的比较
+    //      两个值或者对象是同样类型，并且他们的属性都能通过angular.equals的比较
+    //      两个值都是NaN
+    //      两个值代表两个同样的正则表达式，例如angular.equals('/abc/', '/abc/')
+    //      在属性的比较中，以$开头的属性或函数将被忽略，不做比较。 Scope和DOM对象的比较都是通过===（恒等）来鉴别的。
+    </script>
+</body>

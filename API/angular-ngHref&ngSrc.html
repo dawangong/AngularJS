@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <h1 ng-cloak>{{text}}</h1>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        
+    }
+    //ng-href：
+    //ng-href 指令覆盖了原生的 <a> 元素 href 属性。
+    //如果在 href 的值中有 AngularJS 代码，则需要使用 ng-href 而不是 href。
+    //ng-href 指令确保了链接是正常的，即使在 AngularJS 执行代码前点击链接。
+    
+    //ng-src：
+    //ng-src 指令覆盖了 <img> 元素的 src 属性。
+    //如果你使用了 AngularJS 代码设置图片地址，请使用 ng-src 指令替代 src 属性。
+    //ng-src 指令确保的 AngularJS 代码执行前不显示图片。
+    </script>
+</body>

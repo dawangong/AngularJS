@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <h1 ng-cloak>{{text}}</h1>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.text = '23333333333333333333333333333333333333333333333333';
+    }
+
+    //出去ng-bind外另一种防止页面刷新过快漏出表达式的方法
+    </script>
+</body>

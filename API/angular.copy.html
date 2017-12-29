@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+  
+    var a = [1, 2, 3];
+    var c = a;
+    var b = angular.copy(a);
+    console.log(b);
+    console.log(c);
+    b = [1, 3, 5];
+    b.push(10);
+    //c.push(10);
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    //angular.copy这个方法区别于直接等号赋值复制，改变新的不会影响旧的（增删改）
+    var obj = {
+        value: 666,
+        add: function(a, b) {
+            return a + b;
+        }
+    };
+    var iobj = angular.copy(obj);
+    console.log(iobj);
+    delete iobj.add;
+    console.log(iobj);
+    console.log(obj);
+    //并不影响原有对象，深度copy
+    </script>
+</body>
+
+</html>

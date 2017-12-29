@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/angular.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			float: left; 
+			padding: 2px 15px;
+			margin-right: 2px;
+			
+
+		}
+		ul{
+			width: 210px;
+			margin:300px auto;
+		}
+		.example1{
+			background: orange;
+		}
+		.example2{
+			background: red;
+		}
+	</style>
+</head>
+<body ng-app="apps" ng-controller="ctrl">
+	<ul>
+		<li ng-class="{true:'example1',false:'example2'}[blooe]" ng-click="toggle()">1</li>
+		<li ng-class="{true:'example1',false:'example2'}[blooe]" ng-click="toggle()">2</li>
+		<li ng-class="{true:'example1',false:'example2'}[blooe]" ng-click="toggle()">3</li>
+		<li ng-class="{true:'example1',false:'example2'}[blooe]" ng-click="toggle()">4</li>
+		<li ng-class="{true:'example1',false:'example2'}[blooe]" ng-click="toggle()">5</li>
+	</ul>
+	<script>
+		angular.module('apps', []).controller('ctrl',ctrl);
+		ctrl.inject=['$scope'];
+		function ctrl ($scope) {
+			$scope.blooe=false;
+			$scope.toggle=function () {
+				$scope.blooe=!$scope.blooe;
+			};
+		}
+	</script>
+</body>
+</html>

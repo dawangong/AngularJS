@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <h1 ng-if="expression">23333333</h1>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.expression = false;
+
+    }
+
+    //ng-if 指令用于在表达式为 false 时移除 HTML 元素。
+    //如果 if 语句执行的结果为 true，会添加移除元素，并显示。
+    //ng-if 指令不同于 ng-hide， ng-hide 隐藏元素，而 ng-if 是从 DOM 中移除元素。
+    </script>
+</body>

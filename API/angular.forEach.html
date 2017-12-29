@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+    var a = [1, 2, 3, 4, 5];
+    var temp = angular.forEach(a, function(v, i) {
+        console.log(v);
+    });
+    //1 2 3 4 5
+    </script>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+
+    function ctrl() {
+        // body... 
+    }
+    var a = {
+        name: 'bob',
+        sex: 'boy',
+        go: function() {
+            console.log('2333333');
+        },
+        c: {
+            age: 16
+        }
+    };
+    var b = {};
+    var d = {
+        wocao: '?????'
+    };
+
+    angular.extend(b, a, d);
+    console.log(b);
+    //和copy很像，但是不同的是extend可以同时将很多个对象复制给一个对象下
+    var c=[1,2,3,4];
+    var k=[5,6,8,9];
+    var e=[];
+    angular.extend(e,c);
+    console.log(e);
+    //用于数组时特性消失，只能对应复制
+    </script>
+</body>
