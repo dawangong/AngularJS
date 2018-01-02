@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope','$log'];
+
+    function ctrl($scope,$log) {
+       $log.log('222');
+       $log.warn('222');
+       $log.debug('222');
+       $log.error('222');
+       $log.info('222');
+    }
+
+    //angular 对console对象下的方法的封装
+    
+    </script>
+</body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <div ng-bind-html="variate1"></div>
+
+    <script>
+    angular.module('apps', ['ngSanitize']).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.variate1='jhon <h1>23333</h1>';
+    }
+
+    //绑定变量和元素的innerHtml
+    //必须要有Sanitize模块的支持，不然会因不安全报错
+    </script>
+</body>

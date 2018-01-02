@@ -8,22 +8,17 @@
 </head>
 
 <body ng-app="apps" ng-controller="ctrl">
-    <div ng-style="style1">111</div>
+    <div ng-bind-template="{{variate1}} {{variate2}}"></div>
     <script>
     angular.module('apps', []).controller('ctrl', ctrl);
     ctrl.$inject = ['$scope'];
 
     function ctrl($scope) {
-        $scope.style1={
-            "color":"red",
-            "font-size":"16",
-            "background":"orange",
-            "width":"100px",
-            "height":"100px"
-        };
+        $scope.variate1='jhon';
+        $scope.variate2='jack';
     }
-    
-    //以上面的模式控制样式
+
+    //绑定多个表达式时使用
    
     </script>
 </body>
