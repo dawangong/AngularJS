@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+       
+    }
+    var temp1=angular.element('<div id="box1"></div>');
+    var temp2=angular.element(box2).addClass('box');
+    console.log(temp1);//Object [ div#box1 ]
+    console.log(temp2);//Object [ div#box2 ]
+    //接受html字符串或者dom元素
+    //支持精简版jq的操作
+    </script>
+</body>
