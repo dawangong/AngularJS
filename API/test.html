@@ -7,18 +7,20 @@
     <script src="../js/angular.js"></script>
 </head>
 
-<body ng-app="apps" ng-controller="ctrl as vm">
-    <p>{{vm.front | limitTo : 4}}</p>
-    <p>{{vm.behind | limitTo : -4}}</p>
+<body ng-app="apps" ng-controller="ctrl">
+	<p>{{temp}}</p>
     <script>
     angular.module('apps', []).controller('ctrl', ctrl);
     ctrl.$inject = ['$scope'];
 
     function ctrl($scope) {
-        var vm = this;
-        vm.front = 12345678;
-        vm.behind = 87654321;
+	    $scope.a=3;
+	    $scope.b=4;
+	    $scope.temp=$scope.$eval('5*5');
+	   
     }
-    //从前面或者后面开始截取指定数位
+    //$eval内部其实是调用$parse这个服务
+    //$eval只能用于当前作用域
+    //$eval不需要注入就可以直接使用，不然会报错
     </script>
 </body>

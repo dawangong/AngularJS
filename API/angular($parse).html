@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <p>{{temp}}</p>
+    <p>{{temp2}}</p>
+    <p>{{temp3}}</p>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope', '$parse'];
+
+    function ctrl($scope, $parse) {
+        $scope.a = 3;
+        $scope.b = 4;
+        let fn = $parse('a*b');
+        $scope.temp = fn($scope);
+        //1.一个函数和一个指定作用域
+        $scope.temp2 = $parse('a*b')({ a: 5, b: 6 });
+        //2.后面()跟一个对象，进行赋值
+        $scope.temp3 = $parse('nicai').assign($scope,'2333');
+        //3.第一个参数为定义作用域，第二个参数为将要替换parse的备选品
+    }
+    //$parse返回一个函数，后面可以跟一个作用域($scope)，或者一个对象 locals(用于改变变量的值)
+    </script>
+</body>

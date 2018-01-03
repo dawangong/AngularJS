@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <p>{{temp}}</p>
+    <p>{{temp2}}</p>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope', '$interpolate'];
+
+    function ctrl($scope, $interpolate) {
+        $scope.a = 3;
+        $scope.b = 4;
+        let fn = $interpolate("{{a*b | currency : $}}");
+        $scope.temp = fn($scope);
+        //自定义作用域
+        $scope.temp2 = fn({a:6,b:6});
+        //使用对象重新赋值
+        }
+    
+    //$interpolate插值服务，返回的都是一个函数，可以自定义作用域
+    //$interpolate可以直接使用表达式，表达式内部可以使用filters
+    //tip：$interpolate需要添加一个表达式
+    
+    //$eval,  $interpolate内部其实都是调用$parse这个服务
+    
+    </script>
+</body>

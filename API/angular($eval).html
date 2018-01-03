@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body ng-app="apps" ng-controller="ctrl">
+    <p>{{temp1}}</p>
+    <p>{{temp2}}</p>
+    <p>{{temp3}}</p>
+    <p>{{temp4}}</p>
+    <script>
+    angular.module('apps', []).controller('ctrl', ctrl);
+    ctrl.$inject = ['$scope'];
+
+    function ctrl($scope) {
+        $scope.a = 3;
+        $scope.b = 4;
+        $scope.temp1 = $scope.$eval('a*b');
+        $scope.temp2 = $scope.$eval('5*5');
+        //1.直接操作当前作用域变量或者直接识别字符串
+        $scope.temp3 = $scope.$eval('a*b*c',{a:5,b:6,c:7});
+        //2.接受一个对象进行赋值
+        $scope.temp4 = $scope.$eval(function (scope,locals) {
+               return scope.a+scope.b+locals.c;        
+        },{c:5});
+        //3.接受一个函数和一个对象，在函数内使用
+    }
+    //$eval内部其实是调用$parse这个服务
+    //$eval只能用于当前作用域
+    //$eval不需要注入就可以直接使用，不然会报错
+    </script>
+</body>
