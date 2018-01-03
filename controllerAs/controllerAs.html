@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+</head>
+<body ng-app="apps" ng-controller="ctrl as vm">
+	<div>{{vm.name}}</div>
+	<script>
+		angular.module('apps',[]).controller('ctrl',ctrl);
+		ctrl.$inject=['$scope'];
+		function ctrl ($scope) {
+			var vm=this; 
+			vm.name='zhangsan';
+		}
+	</script>
+</body>
+</html>
