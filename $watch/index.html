@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/angular.js"></script>
+</head>
+
+<body>
+    <div ng-app="apps">
+        <div ng-controller="firstController">
+            <input type="text" value="" ng-model="name" /> 
+            {{name}}
+        </div>
+    </div>
+    <script>
+    var app = angular.module('apps', []);
+    app.controller('firstController', firstController);
+    firstController.inject = ['$scope','$log'];
+
+    function firstController($scope,$log) {
+        $scope.name = '张三';
+        $scope.count = 0;
+        // 监听一个model 当一个model每次改变时 都会触发第2个函数
+        var unbingWatch = $scope.$watch('name', function(newValue, oldValue) {
+            $log.log(oldValue);
+            $scope.count ++;
+            if($scope.count>5) {
+            	unbingWatch();
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
