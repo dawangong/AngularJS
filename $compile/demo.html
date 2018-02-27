@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/angular.js"></script>
+    <script src="compile.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="MyController as vm">
+    <script>
+        angular.module('myApp', ['myApp.compile'])
+            .controller('MyController', function ($scope, $compile) {
+                let vm = this;
+                vm.msg = 'hello';
+                vm.title='<h1>2333</h1>';
+                // 创建编译函数
+                let compileFn = $compile('<p>{{vm.msg}}</p>');
+                // 传入scope，将作用域(scope)和模版"链接"到一起，得到编译好的dom对象(已封装为jqlite对象)
+                let $dom = compileFn($scope);
+                // 添加到文档中
+                angular.element(document.getElementsByTagName('body')[0]).append($dom);
+			})
+    </script>
+    <div compile="vm.title"></div>
+</body>
+</html>

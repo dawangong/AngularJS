@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/angular.js"></script>
+</head>
+<body ng-app="apps" ng-controller="ctrl">
+<ul ng-repeat="i in data">
+    <li>{{i.title}}</li>
+    <ul ng-repeat="j in i.contents">
+        <li>{{j}}</li>
+    </ul>
+</ul>
+    <script>
+        angular.module('apps',[]).controller('ctrl',ctrl);
+        ctrl.$inject = ['$scope'];
+        function ctrl($scope) {
+			$scope.data = [
+				{
+					'title': '标题一',
+					'contents': ['1-1','1-2','……']
+				},
+				{
+					'title': '标题二',
+					'contents': ['2-1','2-2','2-3','……']
+				}
+            ]
+		}
+    </script>
+</body>
+</html>
