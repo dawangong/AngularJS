@@ -1,39 +1,59 @@
-<!-- ScopeAt.html -->
 <!DOCTYPE html>
-<html ng-app="MyModule">
+<html ng-app="myapp">
+
 <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>AngularJS: UI-Router Quick Start</title>
+    <!-- Bootstrap CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<div ng-controller="MyCtrl">
-    <drink flavor="{{ctrlFlavor}}"></drink>
+
+<body class="container">
+<p><i>Best viewed in pop-out mode to see location changes. Click blue button on the right.</i></p>
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">Quick Start</a>
+        <ul class="nav">
+            <li><a ui-sref="route1">Route 1</a></li>
+            <li><a ui-sref="route2">Route 2</a></li>
+        </ul>
+    </div>
 </div>
-</body>
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript">
-    var myModule = angular.module("MyModule",[]);
-    myModule.controller('MyCtrl', ['$scope', function($scope){
-        $scope.ctrlFlavor = "百威";
-    }])
-    myModule.directive("drink", function(){
-        return {
-            restrict: 'AE',
-            template:"<div>{{flavor}}</div>",
-            link: function(scope, element, attrs){
-                scope.flavor = attrs.flavor;
-            }
-        }
+
+<div class="row">
+    <div class="span12">
+        <div class="well" ui-view></div>
+    </div>
+</div>
+
+<!-- Angular -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<!-- UI-Router -->
+<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+<!-- App Script -->
+<script>
+    var myapp = angular.module('myapp', ["ui.router"])
+    myapp.config(function($stateProvider, $urlRouterProvider){
+
+        // For any unmatched url, send to /route1
+        $urlRouterProvider.otherwise("/route1/2")
+
+        $stateProvider
+            .state('route1', {
+                url: "/route1/:index",
+                templateUrl: "route1.html",
+                controller: function($stateParams, $scope) {
+                    $scope.index = $stateParams.index
+                }
+            })
+            .state('route2', {
+                url: "/route2",
+                templateUrl: "route2.html"
+            })
     })
-    // //以上可以直接写作：
-    // myModule.directive("drink", function(){
-    //     return {
-    //         restrict:'AE',
-    //         scope: {
-    //             flavor: '@'
-    //         },
-    //         template: "<div>{{flavor}}</div>"
-    //     }
-    // })
 </script>
+
+</body>
+
 </html>
