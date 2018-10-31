@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="ctrl  as ctrl">
+<form name="form" novalidate="novalidate">
+    <input type="text" ng-model="ctrl.vl" test>
+</form>
+</body>
+<script>
+    //  自定义校验
+    const app = angular.module('app',[]);
+    app.controller('ctrl', ctrl);
+    function ctrl() {
+        this.vl = '2333';
+    }
+    const doo = {
+        restrict: 'AE',
+        require: 'ngModel',
+        link
+    };
+    function link(scope, element, attr, ngModelCtrl) {
+        element.bind('input', () => {
+            console.log(ngModelCtrl);
+        })
+    }
+    app.directive('test', () => doo);
+</script>
+</html>
